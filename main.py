@@ -1,3 +1,3 @@
-from src.Mushroom_classifier import logging
+from Mushroom_classifier import logger
 
-logging.info(f"Create your first logging.")
+logger.info(f"Create your first logging.")
