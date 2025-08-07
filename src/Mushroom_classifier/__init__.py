@@ -22,4 +22,4 @@ logging.basicConfig(
     ]
 )
 
-logging.getLogger("mlClassifierLogger")
+logger = logging.getLogger("mlClassifierLogger")
