@@ -1,6 +1,6 @@
 import pandas as pd
-from src.Mushroom_classifier import logger
-from src.Mushroom_classifier.entity.config_entity import DataValidationConfig
+from Mushroom_classifier import logger
+from Mushroom_classifier.entity.config_entity import DataValidationConfig
 
 
 
