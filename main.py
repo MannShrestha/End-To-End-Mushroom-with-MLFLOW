@@ -3,6 +3,7 @@ from Mushroom_classifier import logger
 from Mushroom_classifier.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
 from Mushroom_classifier.pipeline.stage_02_data_validation import DataValidationTrainingPipeline
 from Mushroom_classifier.pipeline.stage_03_data_transformation import DataTransformationTrainingPipeline
+from Mushroom_classifier.pipeline.stage_04_model_trainer import ModelTrainerTrainingPipeline
 
 
 STAGE_NAME = "Data Ingestion stage"
@@ -40,3 +41,16 @@ try:
 except Exception as e:
     logger.exception(e)
     raise e
+
+
+STAGE_NAME = "Model Trainer stage"
+
+try:
+    logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<") 
+    data_ingestion = ModelTrainerTrainingPipeline()
+    data_ingestion.main()
+    logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
+    
+except Exception as e:
+        logger.exception(e)
+        raise e
